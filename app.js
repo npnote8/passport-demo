@@ -142,8 +142,6 @@ const csrf_options = {
 app.use(csrf(csrf_options));
 
 app.get("/", (req, res) => {
-  console.log("Cookies: ", req.cookies);
-
   let messages = [];
   if (req.session.messages) {
     messages = req.session.messages;
